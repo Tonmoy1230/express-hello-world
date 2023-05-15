@@ -22,10 +22,8 @@ var options = {
   maxAge: '1m',
   redirect: false
 }
-app.get('/',(req,res)=>{
-  if(req.url == '/'){
+
     app.use(express.static('public', options))
-  }
 });
 
 
