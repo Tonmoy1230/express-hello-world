@@ -23,7 +23,7 @@ var options = {
   redirect: false
 }
 app.get('/',(req,res)=>{
-  if(req.url == '/home'){
+  if(req.url == '/'){
     app.use(express.static('public', options))
   }
 });
