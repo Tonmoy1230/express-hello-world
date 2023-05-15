@@ -22,7 +22,12 @@ var options = {
   maxAge: '1m',
   redirect: false
 }
-app.use(express.static('public', options))
+app.get('/',(req,res)=>{
+  if(req.url == '/home'){
+    app.use(express.static('public', options))
+  }
+});
+
 
 // #############################################################################
 // Catch all handler for all other request.
