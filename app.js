@@ -22,7 +22,7 @@ var options = {
   maxAge: '1m',
   redirect: false
 }
-app.get('/home',(req,res)=>{
+app.get('/',(req,res)=>{
     app.use(express.static('public', options));
 });
 
